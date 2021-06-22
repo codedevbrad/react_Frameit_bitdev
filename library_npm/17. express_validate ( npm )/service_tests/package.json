@@ -10,10 +10,7 @@
         "testing",
         "validation"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/codedevbrad/express-validate.git"
-    },
+
     "author": "brad lumber",
     "license": "ISC",
     "devDependencies": {
