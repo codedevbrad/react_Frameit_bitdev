@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="dropdown"
+  data-testid="dropdown"
+>
+  <div
+    className="dropdown_titleArea"
+    onClick={[Function]}
+  >
+    <h1>
+       
+      click me new
+        
+    </h1>
+  </div>
+  <div
+    className="dropdown-content dropdown__undefined"
+  >
+    <ul
+      id="navigation"
+    >
+      <li>
+         hey  
+      </li>
+      <li>
+         dude 
+      </li>
+    </ul>
+  </div>
+</div>
+`;

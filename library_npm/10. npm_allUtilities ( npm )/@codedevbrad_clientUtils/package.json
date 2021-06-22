@@ -1,0 +1,11 @@
+{
+  "name": "@codedevbrad/clientutils",
+  "version": "1.0.0",
+  "description": "a simple package that provides util functions for client-side react projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "leafletmethods_testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testMethods.js",
+  "scripts": {
+    "server": "nodemon main"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

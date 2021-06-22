@@ -1,0 +1,11 @@
+{
+  "name": "leafletjsmethods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server",
+  "author": "Bradley J Lumber",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
