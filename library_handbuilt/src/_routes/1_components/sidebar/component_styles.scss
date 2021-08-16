@@ -1,0 +1,30 @@
+
+nav.app_sidebar {
+    height: 100%; background: white;
+    display: flex; flex-direction:
+    column; padding-bottom: 10px;
+
+    .sidebar-title  {
+        width: 100%; white-space: nowrap;
+        flex: 0 0 55px; display: flex; align-items: center; justify-content: flex-start;
+
+        h1 {
+          display: inline-block; padding: 10px 20px; border-radius: 6px;
+          text-align: left;
+        }
+    }
+
+    #sidebar_modulemenu {
+        width: 100%; flex: 1 0 0px; height: 0px; overflow-y: scroll;
+        ul { width: 85%; height: 100%; margin: 0 auto; }
+        ul > li {
+          padding: 12px 10px; font-size: 0.65em; border-radius: 5px;
+          margin: 20px 0;
+          font-weight: 600; cursor: pointer;
+        }
+
+        ul > li:hover {
+            background: #ffe3e3;
+        }
+    }
+}

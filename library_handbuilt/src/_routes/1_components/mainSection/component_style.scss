@@ -1,0 +1,24 @@
+
+#app_main_section {
+    overflow-y: scroll; padding: 5px 0;
+    flex: 1;
+    code {
+        font-family: Consolas,"courier new"; color: crimson;
+        background: #ffffd8; display: inline-block;  white-space: pre-wrap;
+        font-size: 0.7em; width: 100%; border-radius: 9px;
+        padding: 15px 10px; margin-bottom: 10px;
+    }
+
+    .main_section__eachComponent {
+
+          padding: 0px 13px;
+        > h1 {  padding: 10px 0; }
+    }
+
+    ul.component_notes {
+        margin: 10px 0;
+        li {
+            padding: 5px 0; margin: 5px; font-size: 0.7em; font-weight: 400;
+        }
+    }
+}

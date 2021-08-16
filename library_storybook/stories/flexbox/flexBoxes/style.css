@@ -1,0 +1,23 @@
+
+.flexboxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    width: 100%;
+}
+
+.flex-grow .flexitem {
+    flex-grow: 1;
+}
+
+.flex-1 .flexitem {
+    flex-basis: 100%;
+}
+
+.flex-2 .flexitem {
+    flex-basis: 50%;
+}
+
+.flex-3 .flexitem {
+    flex-basis: 33%;
+}

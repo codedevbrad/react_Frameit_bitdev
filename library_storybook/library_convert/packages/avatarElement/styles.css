@@ -1,0 +1,24 @@
+
+.reactFrameit_avatar {
+  width: auto; height: auto; display: flex; flex-direction: row; align-items: center;
+}
+.reactFrameit_avatar > .reactFrameit_avatar_icon {
+  width: auto; height: auto; margin-right: 5px;
+}
+
+.reactFrameit_avatar > .reactFrameit_avatar_icon > img {
+  width: 40px; height: 40px;
+}
+
+.reactFrameit_avatar_icon-rounded > img {
+  border-radius: 10px;
+}
+
+.reactFrameit_avatar_icon-circle > img {
+  border-radius: 50%;
+}
+
+.reactFrameit_avatar > .reactFrameit_avatar_text {
+  flex: 1; height: 100%;
+  display: flex; align-items: center; justify-content: flex-start; flex-direction: row;
+}

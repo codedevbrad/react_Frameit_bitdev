@@ -1,0 +1,23 @@
+
+.reactFrameit_carousel {
+    width: 100%; height: 100%;
+    .carousel_move {
+        width: 100%; height: 100%; overflow: hidden; transition: all 400ms;
+
+        .carousel_content {
+             width: 100%; height: 100%; display: inline-block; overflow: hidden; transition: all 400ms;
+            .box {
+                width: 0px; height: 100%; display: flex; align-items: center; justify-content: center;
+                float: left;
+            }
+        }
+    }
+
+    .slide_buttons {
+        width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center;
+        > section {
+            padding: 20px;
+            > li { display: inline-block; margin: 0 10px; cursor: pointer; }
+        }
+    }
+}

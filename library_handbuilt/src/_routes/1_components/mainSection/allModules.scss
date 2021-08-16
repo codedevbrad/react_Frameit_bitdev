@@ -1,0 +1,58 @@
+
+.eachComponent_showcase {
+    section {
+      padding: 10px; background: white; margin-bottom: 30px;
+      box-shadow: 3px 3px 9px 4px #f4f4f4; border-radius: 9px;
+
+      h3 { margin: 10px 0; }
+    }
+}
+
+/* === ANIMATED UI ( experience component ) === */
+
+.showcase_animatedUI {
+    width: 100%; height: 200px; display: flex; align-items: center;
+    background: #ebf7ff; padding: 20px; justify-content: center;
+}
+
+/* ==== Accordition ===== */
+
+.showcase_accordition {
+
+  .accordition_menu {
+    display: inline-block; height: 130px; overflow: hidden; margin: 5px;
+    box-shadow: 3px 3px 9px 4px #f4f4f4; border-radius: 8px;
+    ul {
+      width: 100%; height: 100%; overflow-y: scroll;
+      padding: 5px; padding-left: 15px;
+      li {
+          margin: 10px 0;
+      }
+    }
+  }
+}
+
+
+/* ===== CAROUSEL ====== */
+.showcase_carousel {
+     width: 100%;
+    .carousel_cool {
+        > .carousel_move { height: 100px; }
+        .box {
+            padding: 10px;
+        }
+        .box > div {
+          background: red; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+        }
+    }
+}
+
+/* ====== TOOLTOP ====== */
+
+/* ====== ANIMATED ELEMENT ====== */
+
+.showcase_animatedElement {
+    .element_inAnimate {
+        margin-top: 20px;
+    }
+}

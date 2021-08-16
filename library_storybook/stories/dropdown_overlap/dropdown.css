@@ -1,0 +1,58 @@
+
+
+
+/* DARK */
+
+.dropdown__dark {
+    background-color: black; 
+}
+
+.dropdown__dark ul {
+  color: white !important;
+}
+
+
+/* LIGHT */
+
+.dropdown__light {
+  background-color: white; 
+}
+.dropdown__white ul {
+  color: black !important;
+}
+
+
+/* FLOW - Vertical  */
+
+.dropdown__vert ul li {
+    display: block !important;
+}
+
+
+.dropdown_overlap {
+    position: relative; display: inline-block; cursor: pointer;
+}
+
+.dropdown_overlap__titleArea {
+    display: flex; flex-direction: row; align-items: center;
+    padding: 5px;
+}
+
+.dropdown_overlap-content {
+    border-radius: 7px; display: block; position: absolute; 
+    min-width: 120px; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px; z-index: 9999; 
+    top: 0;
+}
+
+.dropdown_overlap-content__item_container { 
+    cursor: initial; 
+    margin: 0; padding: 0;
+}
+
+.dropdown_overlap-content > ul > li {
+    margin: 9px 0;  padding: 10px 5px; border-radius: 6px; font-size: 0.7em; font-weight: 600; 
+    cursor: pointer; list-style: none;
+}
+
+.dropdown_overlap-content > ul > li:hover { background: #1673e614; }

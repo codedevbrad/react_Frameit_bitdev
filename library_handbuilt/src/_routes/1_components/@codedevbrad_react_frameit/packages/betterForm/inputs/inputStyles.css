@@ -1,0 +1,115 @@
+
+/* ======= FORM FIELD - PASSWORD INPUT ====== */
+
+.react_frameit_form-field__password {
+  display: flex; flex-direction: row; align-items: center;
+  border: 1px solid black; border-radius: 5px;
+}
+
+.react_frameit_form-field__password > input {
+  flex: 1; outline: none; border: none; background: none;
+  padding: 0 10px;
+}
+
+.react_frameit_form-field__password > div {
+  flex: 0; display: flex; align-items: center; justify-content: center;
+  padding: 10px; cursor: pointer;
+}
+
+/* ======= FORM FIELD - ANIMATED INPUT ====== */
+
+.reactFrameit_form-field__animated {
+  display: flex; align-items: center; position: relative;
+  align-items: center;
+}
+
+.reactFrameit_form-field__animated > input {
+  width: 100%; height: 100%; padding: 20px 10px;
+
+  border: 1px solid black; border-radius: 3px;
+}
+
+
+.reactFrameit_form-field__animated > span {
+  width: 70px;  position: absolute; left: 0;
+  display: flex; align-items: center;
+  font-weight: 700;
+  font-size: 0.6em; color: black; margin: 0;
+  padding-left: 10px; transition: all 400ms;
+}
+
+
+/* ======= FORM FIELD - EMAIL INPUT ========= */
+
+.reactFrameit_form-field__email  {
+  border: 1px solid black; display: flex; align-items: center; flex-direction: row;
+  padding: 10px 5px;
+}
+
+.reactFrameit_form-field__email > span {
+    padding: 0 10px;
+}
+.reactFrameit_form-field__email > span.email_input__valid {
+    color: #6977ff;
+}
+.reactFrameit_form-field__email > span.email_input__notValid {
+    color: red;
+}
+
+.reactFrameit_form-field__email > input {
+    border: none; outline: none; flex: 1;
+}
+
+
+/* ====== SWITCH TOGGLE ======= */
+
+.reactFrameit_switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.reactFrameit_switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.reactFrameit_switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.reactFrameit_switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.reactFrameit_switch input:checked + .reactFrameit_switch__slider {
+  background-color: #2196F3;
+}
+
+.reactFrameit_switch input:focus + .reactFrameit_switch__slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.reactFrameit_switch input:checked + .reactFrameit_switch__slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

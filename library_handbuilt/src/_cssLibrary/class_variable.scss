@@ -1,0 +1,35 @@
+
+$app_paddingHorizontal: 5%;
+$primary_darkBackground: white;
+$primaryBorder: #f1f1f1;;
+$primary_background: white;
+
+@mixin browserCompatibleShadow ( $color , $space ) {
+
+}
+
+@mixin browserCompatibleSomething (  ) {
+
+}
+
+@mixin buttonStyle ( ) {
+
+}
+
+@mixin inputStyle ( ) {
+
+}
+
+
+@mixin flexbox_row ( $v_type , $h_type ) {
+   flex-direction: row; justify-content: $h_type ; align-items: $v_type;
+}
+
+@mixin scrollContainer ( ) {
+  width: 100%; height: 100%;
+}
+
+@mixin scrollChild ( ) {
+  width: 100%; height: auto;
+  overflow-wrap: break-word; overflow: hidden;
+}

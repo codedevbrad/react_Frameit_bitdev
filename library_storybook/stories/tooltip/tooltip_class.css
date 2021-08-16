@@ -1,0 +1,64 @@
+
+
+
+.reactFramit_tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.reactFramit_tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  text-align: center;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltiptext > p {
+  font-size: 0.7em;
+  color: #fff;
+  font-weight: 400;
+  padding: 8px 10px;
+}
+
+.reactFramit_tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.reactFramit_tooltip .tooltiptext-right  { top: 0px; left: 105%;  }
+.reactFramit_tooltip .tooltiptext-left   { top: 0px; right: 105%; }
+.reactFramit_tooltip .tooltiptext-top    { width: 120px; bottom: 150%; left: 50%; margin-left: -60px; }
+.reactFramit_tooltip .tooltiptext-bottom { width: 120px; top: 150%; left: 50%; margin-left: -60px; }
+
+.reactFramit_tooltip .tooltiptext:after {
+  content: " ";
+  position: absolute;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+.reactFramit_tooltip .tooltiptext-top:after {
+   top: 100%;  /* At the top of the tooltip */
+   left: 50%;
+   border-color: black transparent transparent transparent;
+}
+
+.reactFramit_tooltip .tooltiptext-bottom:after {
+   bottom: 100%;  /* At the top of the tooltip */
+   left: 50%;
+   border-color: transparent transparent black transparent;
+}
+
+.reactFramit_tooltip .tooltiptext-left:after {
+  top: 42%;
+  left: 104%; /* To the right of the tooltip */
+  border-color: transparent transparent transparent black;
+}
+
+.reactFramit_tooltip .tooltiptext-right::after {
+  top: 40%;
+  right: 100%; /* To the left of the tooltip */
+  border-color: transparent black transparent transparent;
+}
