@@ -1,0 +1,11 @@
+{
+  "name": "uikit",
+  "version": "1.0.0",
+  "description": "can i create a new packagejson here for ui kit?.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shards-react": "^1.0.3"
+  }
+}

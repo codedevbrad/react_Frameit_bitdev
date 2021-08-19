@@ -1,0 +1,123 @@
+
+/* Dropdown Menu */
+
+.size {
+    width: 300px;
+}
+
+.reactFrameit_dropdown_facebook-dark {
+    
+    .df-title { color: white; }
+    
+    background-color: black;
+    .menu-item {
+        svg {
+          fill: white; 
+          color: white;
+        }
+        .menu-item-text { color: white; }
+    }
+    .menu-item:hover {
+        background-color: rgb(6, 35, 61);
+        svg { 
+          fill: white; 
+          color: white;
+        }
+    }
+}
+
+
+.reactFrameit_dropdown_facebook-light {
+    background: white;
+    box-shadow: 4px 2px 2px 0px #e0e0e0;
+    border: 1px solid #e0e0e0;
+
+    .menu_item {
+        .menu-item-text { color: black; }
+    }
+
+    .menu-item:hover {
+      background-color: #0e30ae;
+      color: white;
+      svg { fill: white; }
+      .menu-item-text { 
+          .df-title { color: white; }
+       }
+    }
+}
+
+.reactFrameit_dropdown_facebook {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 300px;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow: hidden;
+      transition: height 500ms ease;
+      box-sizing: unset;
+
+      .df-menu {
+          padding: 10px 0;
+
+          .menu-item {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border-radius: 8px;
+                transition: background 500ms;
+                margin: 5px 0;
+                cursor: pointer;
+                
+              .menu-item-text { 
+                width: fit-content;
+                padding-left: 10px;
+
+                  .df-title {
+                      font-size: 1.3em; margin: 0; letter-spacing: 0.1px;
+                  }
+
+              }
+          }
+      }
+  } 
+
+  
+  /* CSSTransition classes  */
+  .menu-primary-enter {
+    position: absolute;
+    transform: translateX(-110%);
+  }
+  .menu-primary-enter-active {
+    transform: translateX(0%);
+    transition: all 500ms ease;
+  }
+
+  .menu-primary-exit {
+    position: absolute;
+  }
+
+  .menu-primary-exit-active {
+    transform: translateX(-110%);
+    transition: all 500ms ease;
+  }
+  
+  
+  .menu-secondary-enter {
+    transform: translateX(110%);
+  }
+
+  .menu-secondary-enter-active {
+    transform: translateX(0%);
+    transition: all 500ms ease;
+  }
+
+  .menu-secondary-exit { }
+  
+  .menu-secondary-exit-active {
+    transform: translateX(110%);
+    transition: all 500ms ease;
+  }
+  
+
+  

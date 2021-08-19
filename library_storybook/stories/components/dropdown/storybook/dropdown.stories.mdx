@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import Dropdown from '../app/dropdown';
+
+<Meta title="Tooltip/Dropdown/readme" />
+
+
+# Dropdown
+
+
+```javascript
+    const Method = ( itemBack ) => {     
+        console.log( itemBack );     
+    }
+```
+
+```javascript
+ const dropdown_required = {
+
+                method: Method , 
+
+                items:
+                [
+                        { 
+                            element: 'center' , 
+                            value: 50 
+                        } , 
+                        { 
+                            element: 'full'   ,
+                            value: 100 
+                        } , 
+                        {
+                            element: 'full-page' ,
+                            value: 200
+                        }
+                ]
+}
+```
+
+test
+
+```javascript
+
+    <Dropdown dropdownText={ 'dropdown' } />
+
+```
+

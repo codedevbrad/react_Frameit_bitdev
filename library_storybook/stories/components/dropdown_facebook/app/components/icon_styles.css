@@ -1,0 +1,44 @@
+
+  /* Icon Button */
+  .reactFrameit-dp-icon {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+  }
+
+  .reactFrameit-dp-fb-icon-dark svg {
+    fill: black;
+  }
+
+  .reactFrameit-dp-fb-icon-light svg {
+    fill: white;
+  }
+
+  .reactFrameit-dp-fb-icon-default svg {
+    fill: white;
+  }
+  
+  .reactFrameit-dp-icon :hover {
+    filter: brightness(1.2);
+  }
+  
+ 
+  .reactFrameit-dp-icon svg { 
+    width:  20px;
+    height: 20px;
+  }
+
+  .reactFrameit-dp-icon-right {
+      width: auto; height: auto; padding: 10px; margin-left: auto;  
+  }
+  
+  .reactFrameit-dp-icon-right svg  {
+      width: 10px; height: 10px;
+  }
+  

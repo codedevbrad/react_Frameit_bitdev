@@ -45,3 +45,6 @@ between the components being tested.
 // questions
 - does uploading modules to bit.dev also upload every node_module within the app. or does it somehow package the only modules used 
   by that component?
+
+
+// was port 6006.
