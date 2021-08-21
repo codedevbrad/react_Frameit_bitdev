@@ -1,0 +1,69 @@
+
+.reactFrameit_pushnav.flow-left {
+    flex-direction: row;
+}
+
+.reactFrameit_pushnav.flow-right  {
+    flex-direction: row-reverse;
+}
+
+.reactFrameit_pushnav.type-fix {
+    .sidenav { position: fixed; }
+}
+
+.reactFrameit_pushnav.type-off-canvas {
+    .sidenav { position: relative; }
+}
+
+
+.reactFrameit_pushnav.type-fix.flow-left {
+    .sidenav { top: 0; left: 0;}
+}
+
+.reactFrameit_pushnav.type-fix.flow-right {
+    .sidenav { top: 0; right: 0; }
+}
+
+
+
+.reactFrameit_pushnav {
+    width: 100%; height: 100%; display: flex; flex-direction: row;
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        z-index: 999;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: all 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    #main {
+        padding: 16px; flex: 1;
+    }
+}
+

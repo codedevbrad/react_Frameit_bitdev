@@ -1,0 +1,10 @@
+
+.reactFrameit_itemsDot {
+        ul {
+
+            li.dummy { width: 1px; height: 100%; visibility: hidden; }
+            li {
+                display: inline-block; margin: 0 10px;
+            }
+        }
+}

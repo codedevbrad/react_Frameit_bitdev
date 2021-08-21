@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+   -webkit-font-smoothing: antialiased;
+    padding: 0; margin: 0;
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;        /* Opera/IE 8+ */
+}
+
+h1, h2, h3, h4, a, li, p, input, label, textarea, button {
+  font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.75em; letter-spacing: 0em;
+}
+
+input , button { font-weight: 400; }
+
+textarea:focus, input:focus{
+    outline: none;
+    border-radius: none;
+}
