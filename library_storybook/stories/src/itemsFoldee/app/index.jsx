@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Dropdown from '../../dropdown/app/dropdown';
 
 import './style.scss';
 
@@ -59,7 +60,7 @@ const ItemsDotDropdown = ( { dropdown_required } ) => {
                 
                 elements.map( ( element , index ) => {
                         if ( element.offsetTop != refPlaced.current.offsetTop ) {
-                            element.style.background = 'red';
+                            // element.style.background = 'red';
                             elementsPut.push( itemsShow[ index ] );
                         } 
                 });
@@ -93,9 +94,15 @@ const ItemsDotDropdown = ( { dropdown_required } ) => {
 
                     </ul>
                     
-                    { itemsHidden.map( ( { element } ) => 
-                        <p> { element } </p>
-                    ) }
+                    <Dropdown dropdownText={ '. . .' } direction='right' theme='dark' flow='vert'
+                              customId='dropdown_unique_foldee' customClasses='dropdown__5'>
+
+                                      <ul>
+                                              { itemsHidden.map( ( { element , value } ) =>
+                                                  <li> { element } </li>
+                                              )}
+                                      </ul>
+                    </Dropdown>
             </div>
         )
 }

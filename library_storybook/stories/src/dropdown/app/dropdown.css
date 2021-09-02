@@ -89,6 +89,7 @@ svg , i { line-height: 0; vertical-align: 0; }
 .dropdown-content > ul > li {
     margin: 9px 0;  padding: 10px 5px; border-radius: 6px; font-size: 0.7em; font-weight: 600; cursor: pointer;
     list-style: none;
+    white-space: nowrap;
 }
 
 .dropdown-content > ul > li:hover { background: #1673e614; }

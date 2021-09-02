@@ -1,0 +1,34 @@
+
+
+.reactFrameit_color-light { 
+    background: white; color: black; 
+
+    ul , div , section , article  {
+        background: white; color: black; 
+    }
+
+    a , li , p , h1 , h2 , h3 , h4 {
+        color: black;
+    }
+    
+    i , svg {
+        fill: black;
+    }
+}
+
+
+.reactFrameit_color-dark { 
+    background: #333; color: white; 
+
+    ul , div , section , article {
+        background: #333; color: white; 
+    }
+
+    a , li , p , h1 , h2 , h3 , h4 {
+        color: white;
+    }
+    
+    i , svg  {
+        fill: white;
+    }
+}

@@ -1,6 +1,6 @@
 import React , { useState } from 'react';
 
-import ModalSingle from './modal';
+import ModalSingle from '../app/modal';
 
 export default {
     title: 'Modal',
@@ -16,6 +16,10 @@ export default {
         Tag: {
             options: [ 'div' , 'li' ] , 
             control: { type: 'select' }
+        } , 
+        isForm: {
+            options: [ false , true ] , 
+            control: { type: 'radio' }
         }
     }
 };
@@ -36,7 +40,7 @@ const ModalWrap = ( { ...props } ) => {
     }
 
     return (
-        <ModalSingle  saveMethod={ save } { ...props }>  
+        <ModalSingle saveMethod={ save } { ...props }>  
             <input type="text" value={ text } onChange={ ( e ) => setText( e.target.value ) } />
         </ModalSingle>
     )
@@ -47,5 +51,5 @@ const Template = (args) => <ModalWrap {...args} />;
 export const view = Template.bind({});
 
 view.args = {
-    type: 'center' , modalToggleTitle: 'toggle modal' , Tag: 'div'
+    type: 'center' , modalToggleTitle: 'toggle modal' , Tag: 'div' , isForm: true 
 };

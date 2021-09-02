@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './style.scss';
 
-const Sidenav = ( { children , width = 300 , classNames , id , flow , type , ...props } ) => {
+const Sidenav = ( { toggleOpen , children , width = 300 , classNames , id , flow , type , ...props } ) => {
 
-        const [ navOpen , setNav ] = useState( false  );
+        const [ navOpen , setNav ] = useState( toggleOpen  );
 
         const handleNav = ( state ) => {
             setNav( !navOpen );
@@ -21,11 +21,11 @@ const Sidenav = ( { children , width = 300 , classNames , id , flow , type , ...
                     </div>
 
                     <div id="main">
-                        <h2>Sidenav Push Example</h2>
-                        <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+                       
                         <div className="dropdown_titleArea" onClick={ e => handleNav( navOpen ) } >
                             <h1> open </h1>
-                        </div>
+                        </div> 
+                        { children }
                     </div>
                 </div>
         )

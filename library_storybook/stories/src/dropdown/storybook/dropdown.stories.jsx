@@ -87,6 +87,15 @@ export default {
     }
 };
 
+const Menu = ( ) => {
+    return (
+        <ul>
+            <li> hey </li>
+            <li> there </li>
+        </ul>
+    )
+}
+
 const Template = (args) => <Dropdown {...args} />;
 
 export const Component = Template.bind({ });
@@ -98,5 +107,5 @@ Component.parameters = {
 Component.args = {
     dropdownText: 'click dropdown' , dropdownRequired: dropdown_required , 
     direction: 'left' , theme: 'dark' , flow: 'horz' ,
-    customId: 'dropdown_unique' , customClasses: 'dropdown__1' 
+    customId: 'dropdown_unique' , customClasses: 'dropdown__1' , children: <Menu />
 };

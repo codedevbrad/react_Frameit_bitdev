@@ -1,18 +1,23 @@
 import React , { useState } from 'react';
-
 import Sidenav from '../app/index';
 
-function FacebookMenuShowcase ( { ...props } ) {
+
+const SideNavShowcase = ( { ...props } ) => {
     return (
-        <>
-            <FacebookMenu dropdownProvider={ <Cog /> } toplevel={ toplevel } submenus={ menus } { ...props } />
-        </>
-    );
+        <div>
+            <Sidenav { ...props } >
+                    <div>
+                            <h1> some stuff here </h1>
+                            <p> paragraphs here and there. </p>
+                    </div>
+            </Sidenav>
+        </div>
+    )
 }
 
 export default {
-    title: 'Menu/pushnav',
-    component: Sidenav , 
+    title: 'Navigation/pushnav',
+    component: SideNavShowcase , 
     argTypes: {
         theme: {
             options: ['light' , 'dark' ] , 
@@ -29,7 +34,7 @@ export default {
     }
 };
 
-const Template = (args) => <Sidenav {...args} />;
+const Template = (args) => <SideNavShowcase {...args} />;
 
 export const Component = Template.bind({ });
 

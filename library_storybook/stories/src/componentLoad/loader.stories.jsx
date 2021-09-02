@@ -38,7 +38,7 @@ const ConsumeContentLoad = ( { ...props } ) => {
 }
 
 export default {
-    title: 'ContentLoad',
+    title: 'Loading/ContentLoad',
     component: ConsumeContentLoad , 
     argTypes: { }
 };

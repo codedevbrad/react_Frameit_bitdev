@@ -3,7 +3,7 @@ import React , { useState } from 'react';
 import Loader from './load';
 
 export default {
-    title: 'Loading',
+    title: 'Loading/loader',
     component: Loader , 
     argTypes: {
         customLoadingClass: {

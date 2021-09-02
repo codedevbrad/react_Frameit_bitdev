@@ -3,8 +3,8 @@ import './modal.css';
 
 const ModalSingle = ( 
     { 
-      Tag = 'div' , children , type = 'default' , modal_id = '' , modal_btn_Class = '' , 
-      modalToggleTitle , saveMethod 
+      Tag = 'div' , isForm = false , children , type = 'default' , modal_id = '' , navigationClass = '' , 
+      modalToggleTitle , saveMethod , theme = 'light'
     } 
 ) => {
  
@@ -20,21 +20,25 @@ const ModalSingle = (
 
     return (
         <Fragment>
-                <Tag className={`reactFrameit_modal_button ${ modal_btn_Class}` } onClick={ e => toggleDropdown(e) }> 
+                <Tag className={`reactFrameit_modal_button` } onClick={ e => toggleDropdown(e) }> 
                     { modalToggleTitle } 
                 </Tag>
 
                 { isToggle &&
-                    <div className="reactFrameit_modal_all">
+                    <div className={ `reactFrameit_modal_all` }>
                         <div className="modal_overlay" onClick={ e => setToggle( false ) }>  </div>
                         <div className={`modal_contain modal_contain_${ type }`}>
-                            <div className={ `modal_style modal_${ type ? type : 'default'}` } id={ modal_id }>
+                            <div className={ `${ navigationClass } reactFrameit-${ theme } modal_style modal_${ type ? type : 'default'}` } id={ modal_id }>
                                     <div className="modal_body"> 
                                          { children }
                                     </div>
+                                    { isForm &&
                                     <div className="modal_submit"> 
-                                         <div onClick={ () => saveMethod( setToggle ) }> send item </div>
+                                         <div onClick={ () => saveMethod( setToggle ) }> 
+                                            send item 
+                                         </div>
                                     </div>
+                                    }
                             </div>
                         </div>
                     </div>

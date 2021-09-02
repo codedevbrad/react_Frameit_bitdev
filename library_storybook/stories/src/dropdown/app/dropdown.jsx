@@ -9,11 +9,12 @@ function overlapPixels ( vert_dir , rect ) {
     return obj;
 }
 
-const Dropdown = ( { 
-    dropdownRequired , dropdownText ,  
-    theme = 'light' , flow = 'vert' , direction = 'right' , verticalPosition = false ,
-    customId , customClasses
 
+const Dropdown = ( { 
+    children , 
+    dropdownRequired = { items: null , method: null } , dropdownText ,  
+    theme = 'light' , flow = 'vert' , direction = 'right' , verticalPosition = false ,
+    customId , customClasses = ''
 } ) => {
 
     const titleRef = useRef( null );
@@ -59,11 +60,19 @@ const Dropdown = ( {
 
                     <ul className="dropdown_item_container">
 
-                          { items.map( ( { element , value } , index ) => 
-                              <li onClick={ ( ) => handleDropdown( value ) } key={ index }> { element } </li>
-                          )}
-
+                         { !children &&
+                           <>
+                             { items.map( ( { element , value } , index ) => 
+                                <li onClick={ ( ) => handleDropdown( value ) } key={ index }> { element } </li>
+                             )}
+                           </>
+                         }
                     </ul>
+                         { children && 
+                            <>
+                                { children }
+                            </>
+                         }
               </div>
             }
       </div>

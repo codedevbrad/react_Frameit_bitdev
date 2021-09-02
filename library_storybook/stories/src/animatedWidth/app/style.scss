@@ -1,0 +1,16 @@
+.reactFrameit_flow-left {
+    float: left;
+}
+
+.reactFrameit_flow-right {
+    float: right;
+}
+
+.reactFrameit_animatedWidth {
+    height: 100%;
+    width: 0;
+    z-index: 999;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    background: cadetblue;
+}

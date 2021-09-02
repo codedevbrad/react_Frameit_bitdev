@@ -27,8 +27,8 @@
   visibility: visible;
 }
 
-.reactFramit_tooltip .tooltiptext-right  { top: 0px; left: 105%;  }
-.reactFramit_tooltip .tooltiptext-left   { top: 0px; right: 105%; }
+.reactFramit_tooltip .tooltiptext-right  { left: 105%;  }
+.reactFramit_tooltip .tooltiptext-left   { right: 105%; }
 .reactFramit_tooltip .tooltiptext-top    { width: 120px; bottom: 150%; left: 50%; margin-left: -60px; }
 .reactFramit_tooltip .tooltiptext-bottom { width: 120px; top: 150%; left: 50%; margin-left: -60px; }
 
