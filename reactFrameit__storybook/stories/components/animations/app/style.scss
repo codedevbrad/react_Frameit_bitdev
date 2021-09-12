@@ -1,0 +1,88 @@
+
+@mixin fadeInSlide_up_mix {
+    animation: fadeInSlide_up_animate ease 2s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 50%;
+    animation-fill-mode:forwards; /*when the spec is finished*/
+    -webkit-animation: fadeInSlide_up_animate ease 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+}
+
+@mixin fadeInSlide_down_mix {
+  animation: fadeInSlide_down_animate ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: fadeInSlide_down_animate ease 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+}
+
+
+@mixin fadeInSlide_static_mix {
+  animation: fadeInSlide_static_animate ease 3s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: fadeInSlide_static_animate ease 3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+}
+
+
+@keyframes fadeInSlide_static_animate {
+  0%  { opacity:0;     }
+  50% { opacity:0.5;   }
+  75% { opacity: 0.75; }
+  100% { opacity: 1;   }
+}
+
+@-webkit-keyframes fadeInSlide_static_animate {
+  0%  { opacity:0;     }
+  50% { opacity:0.5;   }
+  75% { opacity: 0.75; }
+  100% { opacity: 1;   }
+}
+
+
+@keyframes fadeInSlide_down_animate {
+  0%   { opacity:0; transform:  translate(0px,-20px);   }
+  100% { opacity:1; transform:  translate(0px,  0px);   }
+}
+
+@-webkit-keyframes fadeInSlide_down_animate {
+  0% {  opacity:0;  -webkit-transform:  translate(0px,-20px); }
+  100% { opacity:1; -webkit-transform:  translate(0px, 0px);  }
+}
+
+@keyframes fadeInSlide_up_animate {
+  0%   { opacity:0; transform: translate(0px,30px); }
+  100% { opacity:1; transform:  translate(0px,0px);  }
+}
+
+@-webkit-keyframes fadeInSlide_up_animate {
+  0%   { opacity:0; -webkit-transform:  translate(0px,30px); }
+  100% { opacity:1;    -webkit-transform:  translate(0px,0px);  }
+}
+
+
+
+.reactFrameit_animated {
+    opacity: 0;
+}
+
+.rF_a_animated-fade {
+  @include fadeInSlide_static_mix;
+}
+
+.rF_a_animated-slide-down {
+  @include fadeInSlide_down_mix;
+}
+
+.rF_a_animated-slide-up {
+  @include fadeInSlide_up_mix; overflow: hidden;
+}

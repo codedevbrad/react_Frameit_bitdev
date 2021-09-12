@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+<Meta title="Packages/clientUtils/delay/readme" />
+
+# Delay
+
+```javascript
+   import { delay } from '@codedevbrad/clientUtils
+```
+
+| props | type   | description | examples    | rules |
+|-------|------- |-------------| ----------- |-------|
+|  wait | string |  delay time |  4s , 500ms | must trail ms or s |
+
+usage
+
+```javascript
+
+    const func = async ( ) => {
+         await delay( 5000 );
+         console.log('hello');
+         await delay( { wait: '3s' } );
+         console.log('there');
+    }
+
+```

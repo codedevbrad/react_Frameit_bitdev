@@ -1,0 +1,11 @@
+{
+  "name": "@codedevbrad/clientutils--clearing",
+  "version": "1.0.1",
+  "scripts": {
+    "del":  "del-cli --force ./dist" , 
+    "copy": "robocopy ./src /mir ./dist /xd storybook" , 
+    "pack": "npm run del && npm run copy"
+  },
+  "author": "",
+  "license": "ISC"
+}

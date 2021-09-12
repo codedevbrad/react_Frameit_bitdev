@@ -1,0 +1,31 @@
+
+.reactFrameit_translatedContainer {
+    width: 200px; height: auto; overflow: hidden; white-space: nowrap;
+    background: black; color: white;
+    border-radius: 7px; 
+
+    .rF_tC__inner {
+        transition: all 400ms;
+        .rF_tC_i__child {
+            width: 100%;  height: 100%; display: inline-block;
+            padding: 10px;
+
+            div.rF_tC_i_c_backbutton {
+                padding: 10px; display: flex; align-items: center;
+                cursor: pointer;
+            }
+           
+            div.rF_tC_i_c_backbutton span { color: white; }
+
+            .dF_tC_i_c__child_items {
+                ul {
+                padding: 10px;
+                    li {
+                        margin-bottom: 20px; width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+
+.rf-border {
+    border-radius: 6px;
+}
+
+.rf_color-light { 
+    background: white; color: black; 
+
+    // ul , div , section , article  {
+    //     background: white; color: black; 
+    // }
+
+    a , li , p , h1 , h2 , h3 , h4 {
+        color: black;
+    }
+    
+    i , svg {
+        fill: black; stroke: black;
+    }
+}
+
+
+.rf_color-dark { 
+    background: rgb(0, 0, 0); color: white; 
+
+    // ul , div , section , article {
+    //     background: rgb(0, 0, 0); color: white; 
+    // }
+
+    a , li , p , h1 , h2 , h3 , h4 {
+        color: white;
+    }
+    
+    i , svg  {
+        fill: white; stroke: white;
+    }
+}
+
+
+.rf_color-blue { 
+    background: rgb(0, 47, 165); color: white; 
+
+    // ul , div , section , article {
+    //     background: rgb(0, 47, 165); color: white; 
+    // }
+
+    a , li , p , h1 , h2 , h3 , h4 {
+        color: white;
+    }
+    
+    i , svg  {
+        fill: white; stroke: white;
+    }
+}

@@ -1,0 +1,34 @@
+
+.test {
+ 
+}
+
+.reactFrameit_googleLogin {
+    width: 100%; height: 100%; display: flex; flex-direction: column; padding: 0 20px;
+    justify-content: center;
+
+    div.rf-gl-c {
+        margin: 10px;
+    }
+
+    .googleTitle {
+        flex: 0; text-align: center;
+
+        h1 {
+            font-size: 1.7em; 
+        }
+
+        p {
+            margin-top: 20px; font-weight: 400; 
+        }
+    }
+
+    .googleForm {
+        flex: 0; display: flex; align-items: center; justify-content: center;
+    }
+
+    .googleSignin {
+
+        flex: 0; display: flex; align-items: center; justify-content: center; 
+    }
+}

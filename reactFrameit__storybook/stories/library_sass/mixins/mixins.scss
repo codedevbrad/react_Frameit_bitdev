@@ -1,0 +1,17 @@
+
+@mixin buttonBlue ( ) {
+
+}
+
+@mixin inputStyle ( ) {
+
+}
+
+@mixin scrollContainer ( ) {
+  width: 100%; height: 100%;
+}
+
+@mixin scrollChild ( ) {
+  width: 100%; height: auto;
+  overflow-wrap: break-word; overflow: hidden;
+}

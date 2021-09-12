@@ -1,0 +1,13 @@
+
+.reactFrameit_morphcontainer {
+    position: relative; width: 300px; height: auto;
+
+    .rF_morph_svgmorph {
+        position: absolute; z-index: -1;
+        width: 100%; 
+
+        svg {
+            fill: #e0dbff;
+        }
+    }
+}

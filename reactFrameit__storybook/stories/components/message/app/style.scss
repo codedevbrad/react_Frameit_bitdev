@@ -1,0 +1,43 @@
+
+.rF_message_horz__left {
+    left: 20px; margin: auto;
+}
+
+.rF_message_horz__right {
+    right: 20px; margin: auto;
+}
+
+.rF_message_horz__middle {
+    left: 0; right: 0px; margin: auto;
+}
+
+
+.rF_message_vert__top {
+    top: 20px;
+}
+
+.rF_message_vert__bottom {
+    bottom: 20px;
+}
+
+
+.reactFrameit_message {
+    width: 300px; height: auto; position: fixed; 
+    background: black; padding: 25px 20px; color: white; border-radius: 7px;
+
+    .rF_m_inner {
+        width: 100%; height: 100%; position: relative;
+
+        .rF_m_closebtn {   
+            position: absolute; top: 0; right: 0; cursor: pointer;
+        }
+
+        h1 {
+            font-size: 1.1em;
+        }   
+
+        p {
+            margin-top: 15px; font-size: 0.76em;
+        }
+    }
+}

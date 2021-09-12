@@ -1,0 +1,7 @@
+{
+  "name": "@codedevbrad/clientutils",
+  "version": "1.0.1",
+  "description": "a simple package that provides util functions for client-side react projects",
+  "main": "index.js",
+  "license": "ISC"
+}
