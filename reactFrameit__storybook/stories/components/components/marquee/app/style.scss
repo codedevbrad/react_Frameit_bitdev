@@ -1,0 +1,38 @@
+.reactFrameit_marquee {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    span.rF_m_span {
+        display: inline-block;
+        width: max-content;
+        padding-left: 100%;
+        will-change: transform;
+    }
+
+    span.rF_m_span_marquee__slow {
+        animation: marquee 23s linear infinite;
+    }
+
+    span.rF_m_span_marquee__veryslow {
+        animation: marquee 30s linear infinite;
+    }
+    
+
+
+    @keyframes marquee {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+    
+    /* Respect user preferences about animations */
+    @media (prefers-reduced-motion: reduce) {
+        .reactFrameit_marquee span.rF_m_span {
+            animation-iteration-count: 1;
+            animation-duration: 0.01; 
+            width: auto;
+            padding-left: 0;
+        }
+    }
+}

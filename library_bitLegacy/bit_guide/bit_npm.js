@@ -38,6 +38,8 @@ const getCommand = ( { command , module , tag_type } ) => {
             return remove_type == 'local'
                 ? `bit remove ${ module }` 
                 : `bit remove ${workspace} ${module} --remote`;
+        default:
+            break;
     }
 }
 

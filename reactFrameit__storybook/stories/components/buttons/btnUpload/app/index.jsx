@@ -1,8 +1,8 @@
 import react, { useEffect, useState } from 'react';
 import './style.scss';
 
-import Loader from '../../../loading/app/load';
-import Theme from '../../../colorTheme/app';
+import Loader from '../../../loading/loading/app/load';
+import Theme from '../../../../components/colorTheme/app';
 
 const delay = ( ms ) => new Promise( resolve => setTimeout( resolve, ms ));
 
