@@ -1,0 +1,49 @@
+.reactFrameit_offcanvas {
+    overflow-x: hidden; width: 100%; height: 100%;
+
+    .rF_oc_inner {
+        width: 100%; height: 100%; 
+
+        .rF_oc_nav__left  { left: 0;  }
+        .rF_oc_nav__right { right: 0; }
+
+        .rF_oc_navigation {
+            height: 100%; /* 100% Full-height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            background-color: #111; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 60px; /* Place content 60px from the top */
+            transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+            
+            ul {
+                width: 100%; height: 100%; padding: 10px 20px;
+                li {
+                    margin: 20px 0;
+                    a {
+                        text-decoration: none; 
+                        color: white; font-size: 1.4em;
+                    }
+                }
+            }
+        }
+
+        .rF_oc_main {
+            height: 100%; padding: 20px; transition: margin .5s;
+
+            header {
+                display: flex; flex-direction: row; width: 100%; 
+
+                .rF_oc_main_h_title {
+                    flex: 1; height: 100%; display: flex; align-self: center;
+                }
+
+                .rF_oc_main_h_menu {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}

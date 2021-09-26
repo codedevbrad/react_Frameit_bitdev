@@ -26,7 +26,7 @@ const SideNavShowcase = ( { ...props } ) => {
 }
 
 export default {
-    title: 'Navigation/pushnav',
+    title: 'Navigation/sidenav',
     component: SideNavShowcase , 
     argTypes: {
         theme: {
