@@ -3,7 +3,7 @@ import MenuBurger from '../app/index';
 
 export default {
     title: 'Icon/MenuBurger',
-    component:  MenuBurger , 
+    component: MenuBurger , 
     argTypes: {
         type: {
             description: 'switch between different menuBurgers' ,
@@ -20,9 +20,26 @@ export default {
             },
             options: [ true , false ] ,
             control: { type: 'radio' }
+        },
+        sizing: { 
+            description: 'set the sizing of the burgermenu' ,
+            table: {
+                type: { summary: 'type: string' }
+            },
+            options: [ 's' , 's-m' , 'm' , 'm-l' , 'l', 49 ],
+            control: { type: 'radio' }
+        },
+        themeMode: { 
+            description: 'choose the color mode for the hamburger' ,
+            table: {
+                 type: { summary: 'type: string' }
+            },
+            options: ['light', 'dark' ],
+            control: { type: 'radio' }
         }
     }
 };
+
 
 const Template = (args) => <MenuBurger {...args} />;
 

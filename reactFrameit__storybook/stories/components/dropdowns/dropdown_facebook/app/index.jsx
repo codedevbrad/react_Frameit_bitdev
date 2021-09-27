@@ -1,4 +1,4 @@
-import Dropdown from "../../dropdown/app/dropdown";
+import Dropdown from "./components/dropdown/index";
 import NavItem from "./components/navItem";
 
 const FacebookDropdown = ( { dropdownProvider , theme , ...props } ) => {

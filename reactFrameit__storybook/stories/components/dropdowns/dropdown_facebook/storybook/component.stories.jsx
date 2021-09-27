@@ -4,7 +4,7 @@ import Bell from '../app/icons/bell.js';
 import Cog  from '../app/icons/cog.js';
 import Bolt from '../app/icons/bolt.js';
 
-import FacebookMenu from '../app/index';
+import FacebookDropdown from '../app/index';
 
 let toplevel = [
       { icon: <Cog  />  , name: 'my profile' } ,
@@ -34,7 +34,7 @@ let menus = [
 function FacebookMenuShowcase ( { ...props } ) {
     return (
         <>
-        <FacebookMenu dropdownProvider={ <Cog /> } toplevel={ toplevel } submenus={ menus } { ...props } />
+           <FacebookDropdown dropdownProvider={ <Cog /> } toplevel={ toplevel } submenus={ menus } { ...props } />
         </>
     );
 }

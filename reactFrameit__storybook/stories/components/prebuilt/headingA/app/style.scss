@@ -1,0 +1,68 @@
+
+.rF_heading_p_1_style__a {
+    box-shadow: 0px 4px 10px 0px #ededed;
+    .rF_h_p_1__banner {
+        background: rgb(131, 5, 5); color: white;
+    }
+
+    .rF_h_p_1__heading {
+        background: wheat;
+    }
+}
+
+.rF_heading_p_1_style__b {
+    box-shadow: 0px 4px 10px 0px #ededed;
+    .rF_h_p_1__banner {
+        background: rgb(131, 5, 5); color: white;
+    }
+
+    .rF_h_p_1__heading {
+        background: white;
+    }
+}
+
+.reactFrameit_heading_p_1 {
+    width: 100%;
+    height: auto;
+
+    .rF_h_p_1__banner {
+        width: 100%; height: 40px; 
+        display: flex; align-items: center; justify-content: center; 
+    }
+
+    .rF_h_p_1__heading {
+        width: 100%; 
+        display: flex; align-items: center; justify-content: center; flex-direction: column; 
+
+        .rF_h_p_1_heading__center {
+
+            width: 43%; height: 100%;
+
+            .rF_h_p_1_heading__upper_items {
+                width: 100%; height: 40px; display: flex; align-items: center; justify-content: center;
+                padding-top: 15px;
+
+                .rF_h_p_1_heading__links {
+
+                } 
+
+                .rF_h_p_1_heading__title {
+                    font-size: 2.6em; flex: 1; text-align: center;
+                }
+
+                .rF_h_p_1_heading__icons {
+                    
+                }
+            }  
+            
+            nav.rF_h_p_1_heading__lower_items { 
+                width: 100%; height: 70px; display: flex; align-items: center; justify-content: center;
+                ul {
+                    li {
+                        display: inline-block; margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

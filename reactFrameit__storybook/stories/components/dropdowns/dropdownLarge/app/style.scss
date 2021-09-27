@@ -1,0 +1,17 @@
+
+.reactFrameit_dropdownLarge {
+        position: relative;
+        .rF_dL__topItems {
+                display: inline-flex; justify-content: center; align-content: center;
+
+                ul {
+                    li {
+                        display: inline-block; margin-right: 13px; cursor: pointer;
+                    }
+                }
+        }
+        .rF_dL__menuItemsContainer {
+                position: absolute; left: 0; width: 100%;  min-height: 100px;
+                background: rgb(255, 255, 255); border-radius: 7px; box-shadow: 0px 2px 8px 3px #f5f5f5;
+        }
+}

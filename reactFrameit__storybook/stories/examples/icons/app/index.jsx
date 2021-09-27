@@ -20,7 +20,7 @@ const IconDisplay = ( { title , icon } ) => {
             </section>
 
             <div className='icon'>
-                 <span class="material-icons"> { icon } </span>
+                 <span className="material-icons"> { icon } </span>
             </div>
         </div>
     )

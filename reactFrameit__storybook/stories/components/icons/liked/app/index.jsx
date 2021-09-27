@@ -12,7 +12,7 @@ const IconLiked = ( { clicked = ( ) => console.log('clicked') } ) => {
     }
 
     return (
-        <div className="rf_icon_liked" onClick={ ( ) => clickedMethod( !clickedState ) }>
+        <div className="rf_icon_liked noHighlight" onClick={ ( ) => clickedMethod( !clickedState ) }>
                 { clickedState ? 
                     <span className="material-icons-outlined"> favorite </span>
                     :
