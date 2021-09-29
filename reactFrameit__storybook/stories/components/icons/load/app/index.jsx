@@ -1,7 +1,7 @@
 import React from 'react';
-import './load.scss';
+import './style.scss';
 
-const Loader = ( { customLoadingClass = '' }) => {
+const IconLoader = ( { customLoadingClass = '' }) => {
     return (
         <div className={ `loading ${ customLoadingClass }` }> 
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -11,4 +11,4 @@ const Loader = ( { customLoadingClass = '' }) => {
     )
 }
 
-export default Loader;
+export default IconLoader;

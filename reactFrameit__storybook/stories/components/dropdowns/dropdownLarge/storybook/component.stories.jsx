@@ -18,9 +18,9 @@ const Menu1 = ( ) => {
 const DropdownLargeShowcase = ( { ...props } ) => {
 
     let items = [ 
-        { item: 'furniture'   , subMenu: <Menu1 /> } , 
-        { item: 'decorations' , subMenu: false     } , 
-        { item: 'home office' , subMenu: <Menu1 /> }
+        { item: 'furniture'   , subMenu: <Menu1 /> } ,
+        { item: 'decorations' , subMenu: false  , link: '/decorations' } , 
+        { item: 'home office' , subMenu: <Menu1 />  }
     ]
 
     return (

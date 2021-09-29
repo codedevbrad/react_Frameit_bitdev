@@ -1,7 +1,7 @@
 import react, { useEffect, useState } from 'react';
 import './style.scss';
 
-import Loader from '../../../loading/loading/app/load';
+import IconLoader from '../../../icons/load/app/index';
 import Theme from '../../../components/colorTheme/app';
 
 const delay = ( ms ) => new Promise( resolve => setTimeout( resolve, ms ));
@@ -68,7 +68,7 @@ const ButtonUpload = (
 
                     { state == 'progress' && 
                     <div className='icon'> 
-                        <Loader />
+                        <IconLoader />
                     </div> 
                     }
                     { state == 'complete' && 

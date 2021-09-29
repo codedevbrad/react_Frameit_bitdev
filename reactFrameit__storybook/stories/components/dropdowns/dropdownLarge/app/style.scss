@@ -1,17 +1,31 @@
 
 .reactFrameit_dropdownLarge {
-        position: relative;
-        .rF_dL__topItems {
-                display: inline-flex; justify-content: center; align-content: center;
+        position: relative; width: 100%; display: inline-flex; justify-content: center; align-content: center;
 
+        .rF_dL__topItems {
+               
                 ul {
                     li {
                         display: inline-block; margin-right: 13px; cursor: pointer;
+
+                        .rF_dL_tI_navItem_p, .rF_dL_tI_navItem_a {
+                            text-decoration: none; font-size: 1em; color: black;
+                        }
+
+                        .rf_dL_tI__arrow {
+                             span {
+                                 position: relative; top: 7px;
+                             }
+                        }
                     }
                 }
         }
         .rF_dL__menuItemsContainer {
                 position: absolute; left: 0; width: 100%;  min-height: 100px;
                 background: rgb(255, 255, 255); border-radius: 7px; box-shadow: 0px 2px 8px 3px #f5f5f5;
+                padding: 10px;
+                display: flex;
+
+                div { width: 100%; }
         }
 }

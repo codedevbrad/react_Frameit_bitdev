@@ -1,10 +1,10 @@
-import React , { useState } from 'react';
+import React from 'react';
 
-import Loader from '../app/load';
+import IconLoader from '../app/index';
 
 export default {
-    title: 'Loading/loader',
-    component: Loader , 
+    title: 'Icon/load',
+    component: IconLoader , 
     argTypes: {
         customLoadingClass: {
             control: { type: 'text' } 
@@ -12,7 +12,7 @@ export default {
     }
 };
 
-const Template = (args) => <Loader {...args} />;
+const Template = (args) => <IconLoader {...args} />;
 
 export const view = Template.bind({});
 

@@ -1,6 +1,6 @@
-import React , { useEffect, useState } from 'react';
+import React , { useEffect } from 'react';
 
-import ContentLoad , { TrackLoadingHelper } from '../app/loader';
+import ContentLoad , { TrackLoadingHelper } from '../app/index';
 
 
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
