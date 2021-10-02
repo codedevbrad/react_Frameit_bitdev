@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-import { AnimateSharedLayout, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+import MotionMenuItems from '../../../framerMotion/menuItems/app/index';
 
 import IconBurger from '../../../icons/burgerMenu/app/index';
 import './style.scss';
 
 
-const HeaderBar = ({ state } ) => {
+const HeaderBar = ( { state, animateSteps, animationEnd } ) => {
 
         const headingAnimation = {
                 full:   { width: '100px' },
@@ -14,13 +16,17 @@ const HeaderBar = ({ state } ) => {
         }
 
         const titleAnimation = {
-                full:   { opacity: '1' }, 
-                closed: { opacity: '0' }
+                full:   { opacity: 1 }, 
+                closed: { opacity: 0 }
         }
 
         return (
-                <motion.header className="rF_h_p_2_heading" variants={ headingAnimation } animate={ !state ? 'full' : 'closed' } 
-                              transition={{ duration: 1.02 }} 
+                <motion.header className="rF_h_p_2_heading" variants={ headingAnimation } animate={ !state && animateSteps == 0 ? 'full' : 'closed' } 
+                              transition={{ duration: 0.61, ease: 'easeInOut' }} onAnimationComplete={definition => {
+                                      if ( definition == 'closed' ) {
+                                         animationEnd();
+                                      }
+                               }}
                 >
                     <motion.h1 variants={ titleAnimation } animate={ !state ? 'full' : 'closed' }> 
                         gloss 
@@ -29,13 +35,32 @@ const HeaderBar = ({ state } ) => {
         )       
 }
 
+const useTimeout = (callback, delay) => {
+        const savedCallback = React.useRef();
+      
+        React.useEffect(() => {
+          savedCallback.current = callback;
+        }, [callback]);
+      
+        React.useEffect(() => {
+          const tick = () => {
+            savedCallback.current();
+          }
+          if (delay !== null) {
+            let id = setTimeout(tick, delay);
+            return () => clearTimeout(id);
+          }
+        }, [delay]);
+};
+
 
 const NavMenu = ( ) => {
 
-        const item = {
-                hidden: { opacity: 0 , x: 10, y: 10 },
-                show: { opacity: 1,    x: 0, y: 0  }
-        }
+        const [ allowed, setAllowed ] = useState(false);
+
+        useTimeout( () => {
+                setAllowed( true );
+        },  1200 );
 
         const items = [
                 { itemName: 'home'     },
@@ -44,62 +69,69 @@ const NavMenu = ( ) => {
                 { itemName: 'our work' }
         ]
 
-        return (
-                <motion.div className={`rF_h_p_2_nO__menu`} >
-                        <motion.ul initial='hidden' animate={'show'} transition={{ delay: 2, staggerChildren: 0.2 }}>
-                                { items.map(( navItem ) =>
-                                   <motion.li variants={ item }> { navItem.itemName } </motion.li>
-                                )}
-                        </motion.ul> 
-                </motion.div>
+        return ( 
+                <>
+                        { allowed && 
+                                <motion.div className={`rF_h_p_2_nO__menu`} transition={{ staggerChildren: 0.2 }}>
+                                       <MotionMenuItems state={ allowed } />
+                                </motion.div>
+                        }
+                </>
         )
 }
 
 
-const NavOverlay = ( { state }) => {
+const NavOverlay = ( { state, animateSteps, animationEnd }) => {
  
         const NavAnimation = {
                 full:   { width: '100%', float: 'none'  },
-                closed: { width: '0%'  , float: 'right'  }
+                closed: { width: '0%'  , float: 'right' }
         }
 
         return (
-                <AnimateSharedLayout>
-                        <motion.div className={"rF_h_p_2_navOverlay"} 
-                        variants={ NavAnimation } animate={ state ? 'full' : 'closed' } 
-                        transition={{ duration: 1.02 }}
-                        >
-                                { state && <NavMenu /> }
-                        </motion.div> 
-                </AnimateSharedLayout>
+                <motion.div className={"rF_h_p_2_navOverlay"} 
+                variants={ NavAnimation } animate={ state && animateSteps == 1 ? 'full' : 'closed' } 
+                transition={{ duration: 0.78, ease: 'easeInOut' }} onAnimationComplete={ definition => {
+                        if ( definition == 'closed' ) {
+                           animationEnd();
+                        }
+                 }}
+                >
+                        { state && animateSteps == 1 && <NavMenu /> }
+                </motion.div> 
         )
 }
 
 
-const HeadingP2 = ( { children } ) => {
+// 0 header bar > 1 nav open > 2 items show.
+
+const HeadingP2 = ( { children, side = 'left' } ) => {
+
+    const [ animateSteps, setAnimate ] = useState(0);
 
     const [ state , setNav ] = useState( false );
 
     const handleClick = ( state ) => {
-            setNav( state );
+        setNav( state );
     }
 
-    return (
+    const endHeaderAnimation = ( ) => setAnimate( 1 );
+    const endNavOverlayAnimation = ( ) => setAnimate( 0 );
 
-                <motion.div className="reactFrameit_heading__p_2">                    
-                        <div className="rF_h_p_2__navContainer">
-                                <HeaderBar state={ state } />
-                                <div className="rF_h_p_2_nav">
-                                        <IconBurger themeMode={ 'light' } isClicked={ handleClick } />
-                                </div>
-                                
+    return (
+        <motion.div className={`reactFrameit_heading__p_2 reactFrameit_heading_p_2__${ side }`}>           
+                <div className="rF_h_p_2__navContainer">
+                        <HeaderBar state={ state } animateSteps={ animateSteps } animationEnd={ endHeaderAnimation } />
+                        <div className="rF_h_p_2_nav">
+                                <IconBurger themeMode={ 'light' } isClicked={ handleClick } />
                         </div>
-                        <div className="rF_h_P_2__main">
-                                <NavOverlay state={ state } />
-                                { children }
-                        </div>
-                </motion.div> 
-                
+                        
+                </div>
+                <div className="rF_h_P_2__main">
+                        <NavOverlay state={ state } animateSteps={ animateSteps } animationEnd={ endNavOverlayAnimation } />
+                        { children }
+                </div>
+        </motion.div>     
     )
 }
 

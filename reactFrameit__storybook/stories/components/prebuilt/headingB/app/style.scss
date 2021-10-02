@@ -1,8 +1,11 @@
 
+.reactFrameit_heading_p_2__left  { flex-direction: row; }
+.reactFrameit_heading_p_2__right { flex-direction: row-reverse; }
+
 .reactFrameit_heading__p_2 {
 
     width: 100%; height: 100%; overflow: hidden;
-    display: flex; flex-direction: row;
+    display: flex; 
 }  
 
 .reactFrameit_heading__p_2 {

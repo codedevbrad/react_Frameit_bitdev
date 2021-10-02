@@ -1,26 +1,29 @@
+import React, { useState, useEffect } from 'react';
 
-import React from 'react';
-import HeadingP2 from '../app/index';
+import MotionSideBar from '../app/index';
 
 export default {
-    title: 'Prebuild/heading2',
-    component:  HeadingP2 , 
+    title: 'FramerMotion/sidebar',
+    component:  MotionSideBar , 
     argTypes: {
         side: {
             description: '' ,
             table: {
                 type: { summary: 'type: string' },
             },
-            options: ['left' , 'right' ] , 
+            options: ['left', 'right' ] , 
             control: { type: 'radio' } 
         }
     }
 };
 
-const Template = (args) => < HeadingP2 {...args} />;
+const Template = (args) => <MotionSideBar {...args} />;
 export const Component = Template.bind({ });
 
 Component.parameters = {
+
 }
 
-Component.args = { };
+Component.args = { 
+    side: 'left'
+};
