@@ -1,0 +1,31 @@
+{
+  "name": "@codedevbrad/reactframeithooks",
+  "description": "ReactFrameitHooks contains hooks that make react development easier.",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "Readme.md"
+  ],
+  "scripts": {
+    "compile": "rimraf dist && cross-env NODE_ENV=production babel ../staged --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
+    "upload": "npm publish --access public",
+    "update-minor": "npm version minor && npm run upload"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "version": "0.5.0"
+}

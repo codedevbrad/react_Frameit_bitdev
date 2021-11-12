@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import ClickBox from './index';
+
+<Meta title="Hooks/useClickoutside2/readme" component={ ClickBox } />
+
+# useClickOutside
+
+```javascript
+import useClickOutside from '@codedevbrad/reactframeithooks';
+```
+
+```javascript
+
+const ClickBox = ({ onClickOutside }) => {
+    const clickRef = useRef();
+    useClickOutside(clickRef, onClickOutside);
+    return (
+      <div className="click-box" ref={clickRef}>
+        <p>Click out of this element</p>
+      </div>
+    );
+};
+```
+
+```javascript
+  <ClickBox onClickOutside={ ( ) => console.log('clicked outside') } />
+```
+
+<Canvas>
+        <ClickBox onClickOutside={ ( ) => console.log('clicked outside') } />
+</Canvas>

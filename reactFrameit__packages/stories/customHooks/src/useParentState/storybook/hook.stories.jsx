@@ -1,18 +1,6 @@
 import React from 'react';
 
-import useStateParentChange from '../hook/index';
-
-const UseHook = ( { name } ) => {
-
-    let [ state , update ] = useStateParentChange( name );
-
-    return (
-        <div className="useHook">
-                { state }
-                <input value={ state } onChange={ ( e ) => update( e.target.value ) } />
-        </div>
-    )
-}
+import UseHook from './index';
 
 export default {
     title: 'Hooks/useParentState' ,
@@ -26,4 +14,4 @@ export const Hook = Template.bind({});
 
 Hook.args = {
     name: 'harry'
- };
+};

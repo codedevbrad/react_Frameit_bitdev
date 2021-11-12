@@ -1,6 +1,6 @@
 import React from 'react';
 
-const useTimeout = (callback, delay) => {
+const useTimeout = (callback, delay = 1000 ) => {
     const savedCallback = React.useRef();
   
     React.useEffect(() => {

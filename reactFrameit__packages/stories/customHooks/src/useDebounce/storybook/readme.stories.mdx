@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import DebounceComponent from './index';
+
+<Meta title="Hooks/DebounceComponent/readme" component={ DebounceComponent } />
+
+# DebounceComponent
+
+```javascript
+import DebounceComponent from '@codedevbrad/reactframeithooks';
+```
+
+```javascript
+    function DebounceComponent( { delay  } ) {
+        const [count, setCount] = useState('');
+
+        const sync = ( ) => {
+        console.log(count)
+        }
+
+        useDebounce( sync , delay , [count] );
+
+        return (
+            <div>
+                <input value={ count } onChange={ ( e ) => setCount(e.target.value ) } />
+            </div>
+        )
+    }
+```
+
+```javascript
+    <DebounceComponent  delay={ 3000 } />
+```
+
+<Canvas>
+        <DebounceComponent delay={ 3000 } />
+</Canvas>

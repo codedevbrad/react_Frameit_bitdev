@@ -1,0 +1,23 @@
+
+
+.rF_db__left {
+    left: 20px;
+}
+
+.rF_db__right {
+    right: 20px;
+}
+
+.reactFrameit__dbackground {
+    display: inline-block; position: relative;
+
+        h3 {
+            position: relative;
+        }
+
+        .rF_db__background {
+            position: absolute;
+            width: 40px; height: 80px; background: rgb(168, 168, 247);
+            top: -25px;
+        }
+}

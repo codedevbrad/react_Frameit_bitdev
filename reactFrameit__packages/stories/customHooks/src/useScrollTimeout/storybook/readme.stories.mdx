@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import ScrollDelayComponent from './index';
+
+<Meta title="Hooks/useScrollTmeout/readme" component={ ScrollDelayComponent } />
+
+# ScrollDelayComponent
+
+```javascript
+import ScrollDelayComponent from '@codedevbrad/reactframeithooks';
+```
+
+```javascript
+function ScrollDelayComponent( { delay = 1000 } ) {
+
+    const func = ( ) => console.log('ended scroll');
+
+    useScrollTimeout( { func: func , delay } );
+ 
+    return (
+        <div style={ { height: '2000px' }}>
+            hey
+        </div>
+    );
+}
+```
+
+```javascript
+    <ScrollDelayComponent name={otherState } />
+```
+
+<Canvas>
+        <ScrollDelayComponent delay={ 3000 } />
+</Canvas>

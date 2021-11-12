@@ -1,0 +1,33 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import UseHook from './index';
+
+<Meta title="Hooks/useParentState/readme" component={ UseHook } />
+
+# useStateParentChange
+
+```javascript
+import useStateParentChange from '@codedevbrad/reactframeithooks';
+```
+
+```javascript
+const UseHook = ( { name } ) => {
+
+    let [ state , update ] = useStateParentChange( name );
+
+    return (
+        <div className="useHook">
+                { state }
+                <input value={ state } onChange={ ( e ) => update( e.target.value ) } />
+        </div>
+    )
+}
+```
+
+```javascript
+    <UseHook name={otherState } />
+```
+
+<Canvas>
+        <UseHook name={ 'harry' } />
+</Canvas>

@@ -1,16 +1,6 @@
-import React, { useState , useRef } from 'react';
+import React from 'react';
 
-import useTimeout from '../hook/index';
-
-const OneSecondTimer = props => {
-    const [seconds, setSeconds] = React.useState(0);
-    useTimeout(() => {
-      setSeconds(seconds + 1);
-    }, 1000);
-  
-    return <p>{seconds}</p>;
-};
-
+import OneSecondTimer from './index';
   
 export default {
     title: 'Hooks/useTimeout' ,
@@ -23,5 +13,5 @@ const Template = (args) => <OneSecondTimer {...args} />;
 export const Hook = Template.bind({});
 
 Hook.args = {
-    name: 'harry'
- };
+    delay: 3000 
+};

@@ -1,21 +1,16 @@
 {
-  "name": "hooks",
+  "name": "reactFrameitHooks storybook",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "del": "del-cli --force ./dist",
-    "copy": "robocopy ./src /mir ./dist  /xd storybook",
+    "del": "del-cli --force ./staged",
+    "copy": "robocopy ./src /mir ./staged /xd storybook",
     "pack": "npm run del && npm run copy"
-  } ,
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  } ,
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@codedevbrad/reactframeithooks": "^0.5.0"
   }
 }

@@ -1,0 +1,32 @@
+
+import { Meta, Story, Canvas } from '@storybook/addon-docs';
+
+import OneSecondTimer from './index';
+
+<Meta title="Hooks/useTimeout/readme" component={ OneSecondTimer } />
+
+# useTimeout
+
+```javascript
+import useTimeout from '@codedevbrad/reactframeithooks';
+```
+
+```javascript
+const OneSecondTimer = ( ) => {
+    const [seconds, setSeconds] = useState(0);
+    useTimeout( ( ) => {
+      setSeconds(seconds + 1);
+    }, 1000 );
+  
+    return <p>{seconds}</p>;
+};
+
+```
+
+```javascript
+    <OneSecondTimer />
+```
+
+<Canvas>
+    <OneSecondTimer />
+</Canvas>
